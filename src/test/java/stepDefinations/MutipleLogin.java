@@ -41,7 +41,8 @@ public class MutipleLogin {
 	@When("^I enter \"([^\"]*)\" in passwordField$")
 	public void i_enter_in_passwordField(String password) throws Throwable {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("txtPassword")));
-		  driver.findElement(By.name("txtPassword")).sendKeys(password);   
+		  driver.findElement(By.name("txtPassword")).sendKeys(password);
+		  Thread.sleep(3000);
 	}
 
 	@When("^clicking Login Button$")
